@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import logos from './logos.svg'
+import { getSig } from '../api/test1_sig';
 import './App.css'
 
 class App extends Component {
@@ -19,7 +20,13 @@ class App extends Component {
     this.setState({ count })
   }
 
+  callSig = () => {
+    console.log("popopopo - start");
+    getSig();
+  }
+
   render() {
+    this.callSig();
     return (
       <div className="App">
         <header className="App-header">
